@@ -1,0 +1,58 @@
+.form {
+  grid-column: center-start / center-end;
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: $black;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    border: none;
+    border-bottom: 1rem solid transparent;
+    border-radius: 2px;
+    box-shadow: 0 1rem 2rem rgba($black, 0.15);
+    &:focus {
+      outline: none;
+      border-image: linear-gradient(to right, $bubble-blue 0%, $maya-blue 100%);
+      border-image-slice: 1;
+    }
+    &::-webkit-input-placeholder {
+      color: $off-white;
+    }
+    &:placeholder-shown {
+      border-image: linear-gradient(to right, white, white);
+      border-image-slice: 1;
+    }
+  }
+  &__bottom-box {
+    text-align: right;
+    margin-top: 1rem;
+  }
+  &__btn {
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 2px;
+    background-color: $maya-blue;
+    color: white;
+    padding: 0.5rem;
+    transition: all 0.2s;
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: 0 0.5rem 1rem rgba($black, 0.2);
+      transform: translateY(0);
+    }
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba($black, 0.2);
+    }
+  }
+  &__input:placeholder-shown + &__bottom-box > &__btn {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

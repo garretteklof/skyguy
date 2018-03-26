@@ -1,0 +1,15 @@
+.header {
+  grid-column: center-start / center-end;
+  text-align: center;
+  &__title {
+    font-size: 5rem;
+    text-transform: uppercase;
+  }
+  &__slogan {
+    font-size: 1.5rem;
+  }
+  &__img {
+    height: 10rem;
+    margin-bottom: 1rem;
+  }
+}

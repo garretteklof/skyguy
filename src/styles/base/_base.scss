@@ -1,0 +1,35 @@
+$black: #171d1c;
+$off-white: #f0eff4;
+$bubble-blue: #e6fdff;
+$maya-blue: #6ccff6;
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: $black;
+  font-weight: 400;
+}
+
+.container {
+  min-height: 65rem;
+  height: 100vh;
+  display: grid;
+  grid-template-columns:
+    [center-start] repeat(4, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end];
+  align-content: center;
+  justify-content: center;
+  grid-row-gap: 3rem;
+}
