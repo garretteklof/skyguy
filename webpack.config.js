@@ -27,6 +27,15 @@ module.exports = env => {
               {
                 loader: "css-loader",
                 options: {
+                  sourceMap: true,
+                  importLoaders: 1
+                }
+              },
+              {
+                loader: "postcss-loader",
+                options: {
+                  ident: "postcss",
+                  plugins: loader => [require("autoprefixer")()],
                   sourceMap: true
                 }
               },

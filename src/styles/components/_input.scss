@@ -20,6 +20,9 @@
       outline: none;
       border-image: linear-gradient(to right, $bubble-blue 0%, $maya-blue 100%);
       border-image-slice: 1;
+      @media only screen and (max-width: $bp-med) {
+        border: none;
+      }
     }
     &::-webkit-input-placeholder {
       color: $off-white;
@@ -27,6 +30,9 @@
     &:placeholder-shown {
       border-image: linear-gradient(to right, white, white);
       border-image-slice: 1;
+      @media only screen and (max-width: $bp-med) {
+        border: none;
+      }
     }
   }
   &__bottom-box {
