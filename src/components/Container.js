@@ -100,7 +100,7 @@ export default class Container extends React.Component {
           />
         )}
         <div className="github">
-          <a href="https://github.com/garretteklof/skyguy">
+          <a href="https://github.com/garretteklof/skyguy" target="_blank">
             <svg className="github__icon">
               <use xlinkHref="images/sprite.svg#icon-github" />
             </svg>

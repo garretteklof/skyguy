@@ -22,6 +22,11 @@
     grid-template-columns: min-content 1fr;
     grid-column-gap: 1.5rem;
     align-items: center;
+    transition: all 0.3s;
+    &:hover {
+      transform: rotate(5deg) scale(1.1);
+      box-shadow: 0 1rem 2rem rgba($black, 0.4);
+    }
   }
   &__icon {
     height: 3.5rem;
@@ -39,5 +44,10 @@
     grid-template-columns: min-content 1fr;
     align-items: center;
     grid-column-gap: 2rem;
+    transition: all 0.3s;
+    &:hover {
+      transform: rotate(5deg) scale(1.1);
+      box-shadow: 0 1rem 2rem rgba($black, 0.4);
+    }
   }
 }
