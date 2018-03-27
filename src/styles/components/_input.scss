@@ -12,6 +12,10 @@
     border-bottom: 1rem solid transparent;
     border-radius: 2px;
     box-shadow: 0 1rem 2rem rgba($black, 0.15);
+    @media only screen and (max-width: $bp-med) {
+      border: none;
+      box-shadow: none;
+    }
     &:focus {
       outline: none;
       border-image: linear-gradient(to right, $bubble-blue 0%, $maya-blue 100%);
@@ -28,18 +32,27 @@
   &__bottom-box {
     text-align: right;
     margin-top: 1rem;
+    @media only screen and (max-width: $bp-med) {
+      margin-top: 0;
+      text-align: center;
+    }
   }
   &__btn {
     border: none;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     border-radius: 2px;
     background-color: $maya-blue;
     color: white;
-    padding: 0.5rem;
+    padding: 1rem;
     transition: all 0.2s;
+    @media only screen and (max-width: $bp-med) {
+      width: 100%;
+      padding: 2rem;
+      font-size: 2rem;
+    }
     &:active,
     &:focus {
       outline: none;
@@ -54,5 +67,9 @@
   &__input:placeholder-shown + &__bottom-box > &__btn {
     opacity: 0;
     visibility: hidden;
+    @media only screen and (max-width: $bp-med) {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }

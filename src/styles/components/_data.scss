@@ -14,10 +14,14 @@
   box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
   @media only screen and (max-width: $bp-med) {
     grid-template-columns: 1fr;
+    box-shadow: none;
   }
   &--hide {
     opacity: 0;
     visibility: hidden;
+    @media only screen and (max-width: $bp-med) {
+      display: none;
+    }
   }
   &__result {
     display: grid;
