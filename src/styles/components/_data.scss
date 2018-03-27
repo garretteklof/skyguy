@@ -17,11 +17,7 @@
     box-shadow: none;
   }
   &--hide {
-    opacity: 0;
-    visibility: hidden;
-    @media only screen and (max-width: $bp-med) {
-      display: none;
-    }
+    display: none;
   }
   &__result {
     display: grid;
