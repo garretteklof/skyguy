@@ -99,6 +99,13 @@ export default class Container extends React.Component {
             hideData={this.hideData}
           />
         )}
+        <div className="github">
+          <a href="https://github.com/garretteklof/skyguy">
+            <svg className="github__icon">
+              <use xlinkHref="images/sprite.svg#icon-github" />
+            </svg>
+          </a>
+        </div>
       </div>
     );
   }

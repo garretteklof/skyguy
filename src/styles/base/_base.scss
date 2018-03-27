@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-  min-height: 65rem;
+  min-height: 70rem;
   height: 100vh;
   display: grid;
   grid-template-columns:
@@ -41,4 +41,23 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   color: $red;
+}
+
+.github {
+  grid-column: 1 / -1;
+  text-align: center;
+  &__icon {
+    height: 4rem;
+    width: 4rem;
+    fill: $black;
+    transition: all 0.3s;
+    &:hover {
+      transform: translateY(-3px);
+    }
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(0);
+    }
+  }
 }
