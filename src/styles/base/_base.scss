@@ -2,6 +2,7 @@ $black: #171d1c;
 $off-white: #f0eff4;
 $bubble-blue: #e6fdff;
 $maya-blue: #6ccff6;
+$red: #d33f49;
 
 *,
 *:before,
@@ -32,4 +33,12 @@ body {
   align-content: center;
   justify-content: center;
   grid-row-gap: 3rem;
+}
+
+.error {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $red;
 }

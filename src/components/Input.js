@@ -6,7 +6,7 @@ const Input = ({ address, onAddressChange, callAPI, isLoading }) => (
     <input
       className="form__input"
       type="text"
-      placeholder="Enter address"
+      placeholder="Enter Address (ex. 2538 Hoard Street)"
       value={address}
       onChange={onAddressChange}
       autoFocus

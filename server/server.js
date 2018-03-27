@@ -35,7 +35,11 @@ app.post("/api", async (req, res) => {
     const data = Object.assign({}, weatherResponse.data, { formattedAddress });
     res.send(data);
   } catch (e) {
-    res.status(400).send();
+    if (e.code === "ENOTFOUND") {
+      res.status(500).send();
+    } else {
+      res.status(400).send();
+    }
   }
 });
 
