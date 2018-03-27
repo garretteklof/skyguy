@@ -4,6 +4,9 @@ $bubble-blue: #e6fdff;
 $maya-blue: #6ccff6;
 $red: #d33f49;
 
+$bp-med: 43.75em; // 700px
+$bp-sm: 37.5em; // 600px
+
 *,
 *:before,
 *:after {
@@ -14,6 +17,9 @@ $red: #d33f49;
 
 html {
   font-size: 62.5%;
+  @media only screen and (max-width: $bp-sm) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -33,6 +39,10 @@ body {
   align-content: center;
   justify-content: center;
   grid-row-gap: 3rem;
+  @media only screen and (max-width: $bp-med) {
+    margin-top: 2rem;
+    height: 100%;
+  }
 }
 
 .error {
