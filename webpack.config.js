@@ -4,10 +4,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
-if (process.env.NODE_ENV === "development") {
-  require("dotenv").config({ path: ".env.development" });
-}
-
 module.exports = env => {
   const isProduction = env === "production";
   const CSSExtract = new ExtractTextPlugin("styles.css");
@@ -50,17 +46,7 @@ module.exports = env => {
         }
       ]
     },
-    plugins: [
-      CSSExtract,
-      new webpack.DefinePlugin({
-        "process.env.DARKSKY_API_KEY": JSON.stringify(
-          process.env.DARKSKY_API_KEY
-        ),
-        "process.env.GOOGLE_MAPS_API_KEY": JSON.stringify(
-          process.env.GOOGLE_MAPS_API_KEY
-        )
-      })
-    ],
+    plugins: [CSSExtract],
     devtool: isProduction ? "source-map" : "inline-source-map",
     devServer: {
       contentBase: path.join(__dirname, "public"),
